@@ -1,4 +1,8 @@
 import java.lang.StringBuilder;
+/**
+ * My Linked List
+ * My example implementation of a linked list
+ */
 public class MyLinkedList<T> {
 	LinkedListNode<T> start;
 	LinkedListNode<T> end;

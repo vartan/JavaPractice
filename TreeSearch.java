@@ -1,5 +1,8 @@
 import java.util.*;
-
+/**
+ * Tree Search
+ * Finds the distance between two nodes on a binary tree.
+ */
 public class TreeSearch {
 	public static void main(String[] args) {
 		new TreeSearch();

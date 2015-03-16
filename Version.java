@@ -1,5 +1,20 @@
 import java.util.*;
+/**
+ * Compare two version strings, such as "1.0.3" to "1.0.4". 
+ * Returns -1 if the first argument is greater, or 1 if the second argument
+ * is greater
+ */
 public class Version {
+	/**
+	 * Compare two version strings, such as "1.0.3" to "1.0.4". 
+	 * Returns -1 if the first argument is greater, or 1 if the second argument
+	 * is greater
+	 *
+	 * @param  version1 First version to compare
+	 * @param  version2 Second version to compare
+	 * @return 1 if the first argument is greater, or 1 if the second argument
+	 *         is greater
+	 */
 	public static int which(String version1, String version2) {
 		String[] versionParts1 = version1.split("\\.");
 		String[] versionParts2 = version2.split("\\.");

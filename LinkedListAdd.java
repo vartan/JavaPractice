@@ -1,19 +1,30 @@
 import java.lang.StringBuffer;
+/**
+ * Takes two linked lists of digits and adds them together.
+ */
 public class LinkedListAdd {
 	public static void main(String[] args) {
-		LinkedListNode<Integer> list1Head = new LinkedListNode<>(1);
-		list1Head.next(2).next(3);
-		LinkedListNode<Integer> list2Head = new LinkedListNode<>(4);
-		list2Head.next(5).next(6).next(7);
+		MyLinkedList<Integer> list1 = new MyLinkedList<>();
+		list1.add(1);list1.add(2);list1.add(3);list1.add(0);
+		MyLinkedList<Integer> list2 = new MyLinkedList<>();
+		list2.add(4);list2.add(5);list2.add(6);
+		System.out.println(list1.toString());
+		System.out.println("+");
+		System.out.println(list2.toString());
+		System.out.println("_______");
 
-		int int1 = intVal(list1Head);
-		int int2 = intVal(list2Head);
+		int int1 = intVal(list1);
+		int int2 = intVal(list2);
 
-		int sum = int1+int2;
-		LinkedListNode sumHead = intToLinkedList(sum);
+		int sum = int1 + int2;
+		MyLinkedList<Integer> sumHead = intToLinkedList(sum);
 		System.out.println(sumHead.toString());
+
 	}
-	public static int intVal(LinkedListNode<Integer> node) {
+	public static int intVal(MyLinkedList<Integer> list) {
+		if(list==null || list.start == null)
+			throw new NullPointerException();
+		LinkedListNode<Integer> node = list.start;
 		int val = 0;
 		do {
 			val*=10;
@@ -21,19 +32,16 @@ public class LinkedListAdd {
 		} while((node = node.next) != null);
 		return val;
 	}
-	public static LinkedListNode<Integer> intToLinkedList(int num) {
+	public static MyLinkedList<Integer> intToLinkedList(int num) {
 		int numSize = (int)(Math.log10(num));
 		LinkedListNode<Integer> head = null;
 		LinkedListNode<Integer> node = null;
-		for(int i=numSize;i>=0; i--) {
-			int digit = (int)(num/Math.pow(10,i)) % 10;
-			if(head == null) {
-				head = new LinkedListNode<Integer>(digit);
-				node = head;
-			} else {
-				node = node.next(digit);
-			}
+		MyLinkedList<Integer> list = new MyLinkedList<>();
+		int multiplier = (int)Math.pow(10,numSize);
+		for(int i=numSize;i>=0; i--, multiplier/=10) {
+			int digit = (int)(num/multiplier) % 10;
+			list.add(digit);
 		}
-		return head;
+		return list;
 	}
 }

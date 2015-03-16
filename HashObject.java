@@ -1,3 +1,6 @@
+/**
+ * Item in a hash table
+ */
 public class HashObject<K,V>{
 	private K key;
 	private V value;

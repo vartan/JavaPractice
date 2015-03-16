@@ -1,3 +1,11 @@
+/**
+ * Took this from cracking the coding interview or something similar, but
+ * in hindsight I think I misread the question so it's kinda useless code.
+ * Generates a list of sorted integers with one missing, then it finds which one is
+ * missing by reading one bit at a time.
+ * Currently runs in O(log(n)), it uses a binary search to find the missing
+ * number.
+ */
 public class MissingNumber {
 	public static void main(String[] args) {
 		int MAX = 1000;

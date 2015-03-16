@@ -1,4 +1,6 @@
-
+/**
+ * Binary tree node
+ */
 class BinaryTreeNode<T> {
 
     T data;

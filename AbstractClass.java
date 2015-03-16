@@ -1,3 +1,6 @@
+/**
+ * test my knowledge of an abstract class
+ */
 abstract class TestAbstract {
 	public abstract String description();
 }

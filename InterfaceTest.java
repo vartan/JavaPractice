@@ -1,3 +1,6 @@
+/**
+ * testing my memory of an interface
+ */
 interface TestInterface {
 	public String description();
 }

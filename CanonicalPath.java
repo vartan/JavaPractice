@@ -1,5 +1,10 @@
 import java.util.*;
-public class StackTest {
+/**
+ * Canonical path
+ * Simplifies a sample file path
+ * "a/b2/c2/../c3/../../b/c1/../c" to "a/b/c"
+ */
+public class CanonicalPath {
 	public static void main(String[] args) {
 		System.out.println(getCanonical(args[0]));
 

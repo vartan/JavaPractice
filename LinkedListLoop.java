@@ -1,3 +1,5 @@
+// Linked List Loop
+// From cracking the coding interview, forgot to finish this one, please ignore.
 public class LinkedListLoop {
 	public static void main(String[] args) {
 		LinkedListNode<Integer> head = new LinkedListNode<>(1);

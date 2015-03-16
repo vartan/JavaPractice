@@ -1,3 +1,6 @@
+/**
+ * Generates a human readable number from an int.
+ */
 import java.lang.StringBuffer;
 import java.text.DecimalFormat;
 public class HumanReadableNumber {

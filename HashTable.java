@@ -1,3 +1,6 @@
+/**
+ * I was never taught how a hashtable works, here is my attempt at making one.
+ */
 import java.util.*;
 public class HashTable<K,V> {
 	private List <MyLinkedList<HashObject<K,V>>> table;
